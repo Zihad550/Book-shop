@@ -35,12 +35,13 @@ const displayResult = input => {
       book.first_publish_year = 'Unknown';
     };
 
+    // show books on ui
     const div = document.createElement('div');
     div.classList.add('col');
     div.innerHTML = `
     <div class="card h-100 shadow-md">
-    <img src=" https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top h-100 " alt="book image">
-    <div class="card-body">
+    <img id="book-img" src=" https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top h-100 " alt="book image">
+    <div class="card-body">      
       <h4 class="card-title">${book.title}</h4>
       <p class="card-text">Author: ${book.author_name}</span>
       <p class="card-text">First Published: ${book.first_publish_year}</span>
